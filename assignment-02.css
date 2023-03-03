@@ -1,0 +1,154 @@
+/*Here, I have styled my game, making sure everything is clearly laid out for the user
+ Root was created in order to shorten my css code, as most of the circles have the same properties, i have created variables here which i can 
+ reuse later on in the code */
+:root {
+    --circle-width: 200px;
+    --circle-height: 200px;
+    --circle-margin: 4px 8px;
+    --circle-padding: 10px 10px;
+    --circle-position:-90px;
+    --button-position: -80px;
+}
+
+h1, .font{
+    font-family: 'Orbitron';font-size: 22px;
+    text-align: center;
+}
+/*This fixes the layput problem with our counters*/
+.text-style{
+    bottom: auto;
+    padding-top: 13px;
+    padding-top: 13px;
+}
+
+.simonsays{
+    background-color: white;
+}
+/*this is the middle circle of our game*/
+.game{
+    position:relative;
+	width:400px;
+	height:400px;
+	margin:0 auto;
+    margin-top: 50px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
+#start{
+    font-family: 'Orbitron';font-size: 15px;
+    border-width: 6px;
+    text-align: center;
+    border-color: rgb(126, 122, 122);
+    color: rgb(141, 130, 130);
+    width: 90px;
+	height: 50px;
+    position:absolute;
+    right:155px; 
+    top: 175px;
+}
+/*Here is where my black circles are created, that are behind my coloured buttons  */
+.circle {
+    width: var(--circle-width);
+	height:var(--circle-height);
+    margin: var(--circle-margin);
+    padding: var(--circle-padding);
+    border-radius: 50%;
+    position:absolute;
+    background-color: rgb(0, 0, 0);
+}
+/*Here is where i fix the positioning of the black circles, using the root variables I created */
+.blue{
+    right: var(--circle-position); 
+    bottom: var(--circle-position);
+}
+
+.red{
+    right:var(--circle-position); 
+    top: var(--circle-position);
+}
+
+.yellow{
+    left: var(--circle-position); 
+    bottom: var(--circle-position);
+}
+
+.green{
+    left: var(--circle-position); 
+    top: var(--circle-position);
+}
+
+.button{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    padding: 40px 40px;
+}
+
+.button:active {
+    opacity: .0;
+}
+/*these are the coloured buttons, just setting colour and positions of buttons using the root variables*/
+#button-red
+{
+    background-color: red ;
+    right: var(--button-position);
+    top: var(--button-position);
+}
+
+#button-blue
+{
+    background-color: rgb(56, 38, 215);
+    right: var(--button-position); 
+    bottom: var(--button-position); 
+}
+
+#button-yellow
+{
+    background-color: rgb(211, 164, 11);
+    left: var(--button-position);
+    bottom: var(--button-position);
+}
+
+#button-green
+{
+    background-color: rgb(69, 163, 25);
+    left: var(--button-position);
+    top: var(--button-position);
+}
+/*This is for the high score and current score counter boxes */
+.score{
+    border: solid 3px rgb(236, 156, 8);
+    border-radius: 10%;
+    height: 8%;
+    width: 12%;
+    background: rgb(194, 129, 45);
+    font-size: 20px;
+    line-height: 5px;
+    position: absolute;
+}
+
+#current_score{
+    bottom: 180px;
+    right: 90px;
+}
+
+#high_score{
+    bottom: 180px;
+    left: 90px;
+}
+/*This is for the status indicator that is under the start button,this tells us when the game is starting*/
+#statusIndicator{
+    border: solid 2px rgb(236, 188, 174);
+    border-radius: 50%;
+    height: 2%;
+    width: 2%;
+    background: rgb(241, 54, 21);
+    font-size: 20px;
+    line-height: 5px;
+    text-align: center;
+    position: absolute;
+    bottom: 150px;
+    right: 190px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /></head
+  ><head>
+    <link rel="stylesheet" href="assignment-02.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+    />
+
+    <!--Here, I am setting up the layout of the game, the title, a container that holds the 
+  whole game, the coloured buttons and the circles in the background, I have also set
+  up the highscore and current score and the status indicator-->
+    <title>SimonSays</title>
+  </head>
+  <body>
+    <div class="simonsays font">
+      <h1>Simon Says</h1>
+      <br />
+      <div class="container game">
+        <button id="start">START</button>
+        <div class="circle red"></div>
+        <div class="circle green"></div>
+        <div class="circle yellow"></div>
+        <div class="circle blue"></div>
+        <button id="button-red" class="circle button"></button>
+        <button id="button-green" class="circle button"></button>
+        <button id="button-yellow" class="circle button"></button>
+        <button id="button-blue" class="circle button"></button>
+        <div id="high_score" class="score font">
+          <div class="text-style font"><span id = "highscore">00</span></div>
+        </div>
+        <div id="current_score" class="score font">
+          <div class="text-style font"><span id = "current">00</span></div>
+        </div>
+        <div id="statusIndicator"></div>
+      </div>
+    </div>
+
+    <script src="assignment-02.js"></script>
+  </body>
+</html>
